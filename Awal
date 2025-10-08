@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - M.Dwi Prayogo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-bar {
+            transition: width 1s ease-in-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-purple-600">JD</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition duration-300">Beranda</a>
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition duration-300">Tentang</a>
+                    <a href="#skills" class="text-gray-700 hover:text-purple-600 transition duration-300">Keahlian</a>
+                    <a href="#education" class="text-gray-700 hover:text-purple-600 transition duration-300">Pendidikan</a>
+                    <a href="#experience" class="text-gray-700 hover:text-purple-600 transition duration-300">Pengalaman</a>
+                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition duration-300">Kontak</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-purple-600">Beranda</a>
+                <a href="#about" class="block py-2 text-gray-700 hover:text-purple-600">Tentang</a>
+                <a href="#skills" class="block py-2 text-gray-700 hover:text-purple-600">Keahlian</a>
+                <a href="#education" class="block py-2 text-gray-700 hover:text-purple-600">Pendidikan</a>
+                <a href="#experience" class="block py-2 text-gray-700 hover:text-purple-600">Pengalaman</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-purple-600">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-full flex items-center pt-16">
+        <div class="max-w-6xl mx-auto px-4 py-20 text-center text-white">
+            <div class="animate-fade-in-up">
+                <div class="w-32 h-32 mx-auto mb-8 rounded-full bg-white shadow-lg flex items-center justify-center">
+                    <svg class="w-20 h-20 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-4">John Doe</h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">Full Stack Developer & UI/UX Designer</p>
+                <p class="text-lg mb-8 max-w-2xl mx-auto opacity-80">
+                    Passionate developer dengan 5+ tahun pengalaman dalam menciptakan solusi digital yang inovatif dan user-friendly
+                </p>
+                <div class="space-x-4">
+                    <a href="#contact" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Hubungi Saya</a>
+                    <a href="#about" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition duration-300">Lihat Portofolio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Tentang Saya</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-purple-400 to-blue-500 rounded-full flex items-center justify-center shadow-2xl">
+                        <svg class="w-40 h-40 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Halo! Saya John Doe</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Saya adalah seorang Full Stack Developer yang berpengalaman dalam mengembangkan aplikasi web dan mobile. 
+                        Dengan latar belakang yang kuat dalam teknologi modern, saya selalu berusaha menciptakan solusi yang 
+                        tidak hanya fungsional tetapi juga memberikan pengalaman pengguna yang luar biasa.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Passion saya terletak pada pemecahan masalah kompleks melalui kode yang bersih dan efisien. 
+                        Saya percaya bahwa teknologi harus dapat diakses dan bermanfaat bagi semua orang.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">📧 Email</h4>
+                            <p class="text-gray-600">john.doe@email.com</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">📱 Telepon</h4>
+                            <p class="text-gray-600">+62 812-3456-7890</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">📍 Lokasi</h4>
+                            <p class="text-gray-600">Jakarta, Indonesia</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">🎂 Usia</h4>
+                            <p class="text-gray-600">28 Tahun</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Keahlian</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Berikut adalah teknologi dan tools yang saya kuasai dalam pengembangan aplikasi
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Technical Skills -->
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+                        <span class="text-2xl mr-3">💻</span>
+                        Technical Skills
+                    </h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">JavaScript/TypeScript</span>
+                                <span class="text-purple-600 font-semibold">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">React/Next.js</span>
+                                <span class="text-purple-600 font-semibold">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Node.js/Express</span>
+                                <span class="text-purple-600 font-semibold">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Python/Django</span>
+                                <span class="text-purple-600 font-semibold">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Database (SQL/NoSQL)</span>
+                                <span class="text-purple-600 font-semibold">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design & Tools -->
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+                        <span class="text-2xl mr-3">🎨</span>
+                        Design & Tools
+                    </h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">UI/UX Design</span>
+                                <span class="text-purple-600 font-semibold">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Figma/Adobe XD</span>
+                                <span class="text-purple-600 font-semibold">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Git/GitHub</span>
+                                <span class="text-purple-600 font-semibold">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Docker/AWS</span>
+                                <span class="text-purple-600 font-semibold">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-700">Agile/Scrum</span>
+                                <span class="text-purple-600 font-semibold">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Pendidikan</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Perjalanan pendidikan yang membentuk fondasi pengetahuan dan keahlian saya
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Education Item 1 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg card-hover">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div class="flex-1">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold text-xl">🎓</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800">Sarjana Teknik Informatika</h3>
+                                    <p class="text-purple-600 font-semibold">Universitas Indonesia</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Fokus pada pengembangan perangkat lunak, algoritma, dan struktur data. 
+                                Aktif dalam organisasi mahasiswa dan berbagai kompetisi programming.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">IPK: 3.75</span>
+                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Cum Laude</span>
+                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Best Thesis Award</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 md:mt-0 md:ml-8">
+                            <span class="bg-purple-600 text-white px-4 py-2 rounded-full font-semibold">2016 - 2020</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Item 2 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg card-hover">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div class="flex-1">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold text-xl">📜</span>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800">Full Stack Web Development Bootcamp</h3>
+                                    <p class="text-blue-600 font-semibold">Hacktiv8 Indonesia</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Intensive bootcamp covering modern web development technologies including React, Node.js, 
+                                Express, MongoDB, and deployment strategies.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Top 5 Graduate</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Final Project: A+</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 md:mt-0 md:ml-8">
+                            <span class="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold">2020</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Item 3 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg card-hover">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div class="flex-1">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold text-xl">🏆</span>
+                                </div>
+                                <div>
+                          
